@@ -2,23 +2,33 @@
 <link rel="stylesheet" href="/css/styles.css">
 <html lang="en">
     <%- include('./head'); %>
-<body>
-    <table class="table table-dark table-responsive">
-        <tr>
-            <th scope="col">Name</th>
-            <th scope="col">Last</th>
-            <th scope="col">Buy</th>
-            <th scope="col">Sell</th>
-            <th scope="col">Volume</th>
-            <th scope="col">Base_unit</th>
-        </tr>
-        <% results.forEach(function(result) { %>
-            <tr>
-                <% for (let key in result) { %>
-                    <td><%= result[key] %></td>
-                <% } %>
+<body class="bg-secondary">
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            <div>
+                <img src="/assests/HODLINFO.8f78fc06.png" class="mt-5" alt="HODLINFO Logo" style="height: 50px;"> <br>
+                <div class="mb-2">Powered By <span class="text-info">Finstreet</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="table-responsive mx-5 h2 text-center">
+        <table class="table">
+            <tr class="trow h2">
+                <th scope="col">Name</th>
+                <th scope="col">Last</th>
+                <th scope="col">Buy</th>
+                <th scope="col">Sell</th>
+                <th scope="col">Volume</th>
+                <th scope="col">Base_unit</th>
             </tr>
-        <% }) %>
-    </table>
+            <% results.forEach(function(result) { %>
+                <tr class="h3 bg-dark text-white">
+                    <% for (let key in result) { %>
+                        <td><%= result[key] %></td>
+                    <% } %>
+                </tr>
+            <% }) %>
+        </table>
+    </div>
 </body>
 </html>
