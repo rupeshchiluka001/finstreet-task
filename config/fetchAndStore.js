@@ -33,4 +33,6 @@
         if (++i === 10) break;
     }
     console.log("Documents stored");
+    
+    process.exit(0);
 })()
