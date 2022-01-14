@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="/css/styles.css">
+<html lang="en">
+    <%- include('./head'); %>
+<body>
+    <table class="table table-dark table-responsive">
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Last</th>
+            <th scope="col">Buy</th>
+            <th scope="col">Sell</th>
+            <th scope="col">Volume</th>
+            <th scope="col">Base_unit</th>
+        </tr>
+        <% results.forEach(function(result) { %>
+            <tr>
+                <% for (let key in result) { %>
+                    <td><%= result[key] %></td>
+                <% } %>
+            </tr>
+        <% }) %>
+    </table>
+</body>
+</html>

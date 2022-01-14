@@ -1,0 +1,13 @@
+body {
+    background-color: antiquewhite;
+}
+
+table {
+    border-collapse: collapse;
+    width: 90%;
+}
+
+tr {
+    padding: 10px;
+    background-color: aqua;
+}
